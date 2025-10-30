@@ -13,7 +13,6 @@ llm = ChatOllama(model="llama3.2:1b")
 output_parser = StrOutputParser()
 
 # 3. capital_template 사용
-
 capital_chain = PromptTemplate(
   template="What is the capital of {country}? Return the name of the capital only.",
   input_variables=["country"]
@@ -27,7 +26,6 @@ capital_chain.invoke({"country": "France"})
 
 
 # 6. country_template 사용
-
 country_template = PromptTemplate(
   template="Guess the name of the country based on the following information:" \
   "{information}" \
