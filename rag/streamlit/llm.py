@@ -87,6 +87,7 @@ def get_rag_chain():
             ("ai", "{answer}"),
         ]
     )
+    # 예시 기반 프롬프트 템플릿 생성
     few_shot_prompt = FewShotChatMessagePromptTemplate(
         example_prompt=example_prompt,
         examples=answer_examples,
